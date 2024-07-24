@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { JokeModule  } from "./joke/joke.module";
+import { JokeModule } from "./joke/joke.module";
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -15,4 +15,4 @@ import { JokeModule  } from "./joke/joke.module";
   controllers: [],
   providers: [],
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,5 +1,4 @@
 export class CreateJokeDto {
-    type: string;
-    content: string;
-  }
-  
+  type: string;
+  content: string;
+}
