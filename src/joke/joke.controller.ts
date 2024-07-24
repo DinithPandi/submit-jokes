@@ -4,7 +4,7 @@ import { CreateJokeDto } from './dto/create-joke.dto';
 
 @Controller('jokes')
 export class JokeController {
-  constructor(private readonly jokeService: JokeService) {}
+  constructor(private readonly jokeService: JokeService) { }
 
   @Post()
   create(@Body() createJokeDto: CreateJokeDto) {

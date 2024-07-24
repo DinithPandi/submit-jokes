@@ -9,4 +9,4 @@ import { Joke, JokeSchema } from './entities/joke.schema';
   controllers: [JokeController],
   providers: [JokeService],
 })
-export class JokeModule {}
+export class JokeModule { }
