@@ -1,4 +1,14 @@
+import { IsString, IsNotEmpty, IsBoolean } from 'class-validator';
+
 export class CreateJokeDto {
-  type: string;
+  @IsString()
+  @IsNotEmpty()
   content: string;
+
+  @IsString()
+  @IsNotEmpty()
+  type: string;
+
+  @IsBoolean()
+  approved: boolean;
 }

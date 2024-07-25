@@ -6,9 +6,10 @@ import { CreateJokeDto } from './dto/create-joke.dto';
 export class JokeController {
   constructor(private readonly jokeService: JokeService) { }
 
-  @Post()
-  create(@Body() createJokeDto: CreateJokeDto) {
-    return this.jokeService.create(createJokeDto);
+  @Post('submit')
+  async create(@Body() createJokeDto: CreateJokeDto) {
+    const joke = await this.jokeService.create(createJokeDto);
+    return { success: !!joke };
   }
 
   @Get()
